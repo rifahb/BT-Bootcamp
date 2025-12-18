@@ -1,0 +1,34 @@
+@startuml
+
+class Restaurant {
+    name : String
+}
+
+class Branch {
+    location : String
+}
+
+class Menu {
+    name : String
+}
+
+class SpecialMenu {
+    discount : float
+}
+
+class CourseCategory {
+    categoryName : String
+}
+
+class MenuItem {
+    itemName : String
+    price : float
+}
+
+Restaurant "1" -- "*" Branch : has
+Restaurant "1" -- "*" Menu : offers
+Menu "1" -- "*" CourseCategory : contains
+CourseCategory "1" -- "*" MenuItem : has
+SpecialMenu --|> Menu
+
+@enduml

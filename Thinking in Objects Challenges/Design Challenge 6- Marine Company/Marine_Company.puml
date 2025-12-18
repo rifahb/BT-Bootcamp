@@ -1,0 +1,31 @@
+@startuml
+
+class MarineCompany {
+    name : String
+}
+
+abstract class Ship {
+    shipId : int
+    name : String
+}
+
+class CruiseShip
+class CargoShip
+
+class Customer {
+    customerId : int
+    name : String
+}
+
+class Booking {
+    bookingId : int
+    amount : float
+}
+
+MarineCompany "1" -- "*" Ship : owns
+Ship "1" -- "*" Booking : has
+Booking "1" -- "1" Customer : made by
+CruiseShip --|> Ship
+CargoShip --|> Ship
+
+@enduml

@@ -1,5 +1,4 @@
 def get_score(subject_name):
-    """Reads and validates score input."""
     while True:
         try:
             score = float(input(f"Enter marks for {subject_name} (0–100): "))
@@ -12,7 +11,6 @@ def get_score(subject_name):
 
 
 def calculate_class(avg):
-    """Determines the class based on average score."""
     if avg >= 60:
         return "1st Class"
     elif avg >= 50:

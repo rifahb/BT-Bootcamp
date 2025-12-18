@@ -1,0 +1,49 @@
+1. Problem Statement (Summary)
+
+A surgeon management system where:
+
+A surgeon works for many hospitals
+
+A surgeon conducts operations on patients
+
+Patients are admitted to wards
+
+Surgeons are of different types (Senior, Non-Senior)
+
+The system should:
+
+Find total number of patients being operated
+
+List all patients being operated by a surgeon
+
+List all patients admitted to a ward
+
+2️. Identified Classes
+
+From the problem statement:
+
+Surgeon (base class)
+
+SeniorSurgeon
+
+NonSeniorSurgeon
+
+Hospital
+
+Ward
+
+Patient
+
+Operation
+
+3️. Relationships (OO Design)
+
+Surgeon works for many Hospitals
+
+Surgeon performs many Operations
+
+Operation involves one Patient
+
+Ward admits many Patients
+
+SeniorSurgeon / NonSeniorSurgeon IS-A Surgeon

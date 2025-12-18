@@ -1,0 +1,82 @@
+Problem Statement (Summary)
+
+A trainer trains many trainees on a given technology in a course. A course contains many modules, each module contains multiple units, and each unit consists of many topics.
+
+Identified Classes
+
+The following classes were identified from the problem statement:
+
+Trainer
+Trainee
+Technology
+Course
+Module
+Unit
+Topic
+
+Class Descriptions
+
+1. Trainer
+Responsibility: Conducts training for trainees and teaches a technology.
+
+Attributes:
+trainerId : int
+name : String
+
+Methods:
+train() – trains trainees
+assignTechnology() – assigns a technology to the trainer
+
+2. Trainee
+Responsibility: Enrolls in training provided by a trainer.
+
+Attributes:
+traineeId : int
+name : String
+
+Methods:
+enroll() – enrolls into a course
+
+3. Technology
+Responsibility: Represents the technology being taught.
+
+Attributes:
+techId : int
+techName : String
+
+4. Course
+Responsibility: Represents a structured course for a technology.
+
+Attributes:
+courseId : int
+courseName : String
+
+Methods:
+addModule() – adds modules to the course
+
+5. Module
+Responsibility: Represents a major section of a course.
+
+Attributes:
+moduleId : int
+moduleName : String
+
+Methods:
+addUnit() – adds units to the module
+
+6. Unit
+Responsibility: Represents a subdivision of a module.
+
+Attributes:
+unitId : int
+unitName : String
+
+Methods:
+addTopic() – adds topics to the unit
+
+7. Topic
+Responsibility: Represents the smallest learning element.
+
+Attributes:
+topicId : int
+topicName : String

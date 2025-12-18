@@ -1,0 +1,36 @@
+@startuml
+
+class Company {
+    companyId : int
+    name : String
+}
+
+class Customer {
+    customerId : int
+    name : String
+    +placeOrder()
+}
+
+class RegisteredCustomer {
+    discountRate : double
+    +applyDiscount()
+}
+
+class Order {
+    orderId : int
+    orderDate : String
+    +calculateTotal()
+}
+
+class Item {
+    itemId : int
+    itemName : String
+    price : double
+}
+
+Company "1" -- "*" Item : sells
+Customer "1" -- "*" Order : places
+Order "*" -- "*" Item : contains
+RegisteredCustomer --|> Customer
+
+@enduml

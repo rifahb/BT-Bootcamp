@@ -1,0 +1,28 @@
+🔹 Design Challenge 3: Online Exam (Python)
+1️⃣ Problem Statement (Summary)
+
+An online exam portal contains a list of questions.
+Each question belongs to a category and a topic.
+Questions can be of different types such as MCQ or Paragraph.
+
+The system should:
+
+Find total number of questions
+
+List questions belonging to a topic
+
+List questions belonging to a topic and category
+
+2️⃣ Identified Classes
+
+Exam
+
+Question (base class)
+
+MCQQuestion
+
+ParagraphQuestion
+
+Category
+
+Topic

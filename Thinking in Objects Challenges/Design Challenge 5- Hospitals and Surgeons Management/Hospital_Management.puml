@@ -1,0 +1,35 @@
+@startuml
+
+abstract class Surgeon {
+    surgeonId : int
+    name : String
+}
+
+class SeniorSurgeon
+class NonSeniorSurgeon
+
+class Hospital {
+    hospitalName : String
+}
+
+class Ward {
+    wardNumber : int
+}
+
+class Patient {
+    patientId : int
+    name : String
+}
+
+class Operation {
+    operationId : int
+}
+
+Surgeon "1" -- "*" Hospital : works for
+Surgeon "1" -- "*" Operation : performs
+Operation "1" -- "1" Patient : operates on
+Ward "1" -- "*" Patient : admits
+SeniorSurgeon --|> Surgeon
+NonSeniorSurgeon --|> Surgeon
+
+@enduml

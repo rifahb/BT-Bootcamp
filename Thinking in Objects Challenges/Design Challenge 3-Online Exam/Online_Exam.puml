@@ -1,0 +1,39 @@
+@startuml
+
+class Exam {
+    questions : List<Question>
+    +getTotalQuestions()
+    +getQuestionsByTopic()
+    +getQuestionsByTopicAndCategory()
+}
+
+abstract class Question {
+    questionId : int
+    questionText : String
+}
+
+class MCQQuestion {
+    options : String[]
+}
+
+class ParagraphQuestion {
+    wordLimit : int
+}
+
+class Category {
+    categoryId : int
+    categoryName : String
+}
+
+class Topic {
+    topicId : int
+    topicName : String
+}
+
+Exam "1" -- "*" Question : contains
+Question "1" -- "1" Category : belongs to
+Question "1" -- "1" Topic : belongs to
+MCQQuestion --|> Question
+ParagraphQuestion --|> Question
+
+@enduml

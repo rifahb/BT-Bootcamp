@@ -1,0 +1,42 @@
+1. Problem Statement (Summary)
+
+A restaurant has multiple branches at different locations.
+The restaurant offers multiple menus.
+Some menus are special menus with a 30% discount.
+Each menu contains at least 3 course categories, and each course category has its own menu items.
+
+The system should:
+
+List total number of menu items
+
+List all menu items for a given course category
+
+List all special discount menus
+
+2️. Identified Classes
+
+From the problem statement:
+
+Restaurant
+
+Branch
+
+Menu
+
+SpecialMenu
+
+CourseCategory
+
+MenuItem
+
+3. Relationships (OO Design)
+
+Restaurant has many Branches
+
+Restaurant offers many Menus
+
+SpecialMenu IS-A Menu
+
+Menu has many CourseCategories
+
+CourseCategory has many MenuItems

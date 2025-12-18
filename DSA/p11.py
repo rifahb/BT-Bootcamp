@@ -1,5 +1,4 @@
 def get_positive_float(prompt):
-    """Validates and returns a positive float value."""
     while True:
         try:
             value = float(input(prompt))
@@ -24,7 +23,7 @@ def calculate_annual_gross(gross_monthly, bonus_percent):
 def main():
     print("=== Employee Salary Calculator ===")
 
-    # Input employee details
+    
     name = input("Enter Employee Name: ")
     emp_id = input("Enter Employee ID: ")
 
@@ -32,11 +31,11 @@ def main():
     special_allowance = get_positive_float("Enter Special Allowances (Monthly): ₹")
     bonus_percent = get_positive_float("Enter Annual Bonus (% of Annual Gross Salary): ")
 
-    # Calculations
+   
     gross_monthly = calculate_gross_monthly(basic_salary, special_allowance)
     annual_gross = calculate_annual_gross(gross_monthly, bonus_percent)
 
-    # Output report
+    
     print("\n======= EMPLOYEE SALARY REPORT =======")
     print(f"Employee Name        : {name}")
     print(f"Employee ID          : {emp_id}")
@@ -44,6 +43,4 @@ def main():
     print(f"Annual Gross Salary  : ₹{annual_gross:,.2f}")
     print("=======================================")
 
-
-# Run the program
 main()

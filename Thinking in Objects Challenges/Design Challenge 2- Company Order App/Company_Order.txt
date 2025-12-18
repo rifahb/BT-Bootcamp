@@ -1,0 +1,59 @@
+Problem Statement (Summary)
+
+A company sells different items to customers who place orders. An order can be placed for several items. The company gives special discounts to its registered customers.
+
+Identified Classes
+
+The following classes were identified from the problem statement:
+
+Company
+Customer
+RegisteredCustomer
+Order
+Item
+
+Class Descriptions
+
+1. Company
+Responsibility: Represents the organization that sells items to customers.
+
+Attributes:
+companyId : int
+name : String
+
+2. Customer
+Responsibility: Represents a customer who can place orders.
+
+Attributes:
+customerId : int
+name : String
+
+Methods:
+placeOrder() – places an order for items
+
+3. RegisteredCustomer
+Responsibility: Represents a special type of customer who receives discounts.
+
+Attributes:
+discountRate : double
+
+Methods:
+applyDiscount() – applies special discount to the order
+
+4. Order
+Responsibility: Represents an order placed by a customer.
+
+Attributes:
+orderId : int
+orderDate : String
+
+Methods:
+calculateTotal() – calculates total cost of the order
+
+5. Item
+Responsibility: Represents an item sold by the company.
+
+Attributes:
+itemId : int
+itemName : String
+price : double

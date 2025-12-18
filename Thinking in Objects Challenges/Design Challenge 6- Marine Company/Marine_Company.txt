@@ -1,0 +1,48 @@
+1. Problem Statement (Summary)
+
+A marine company owns multiple ships.
+Ships can be of two types:
+
+Cruise ships (for passenger travel)
+
+Cargo ships (for transporting goods)
+
+Customers register/book a ship to:
+
+Travel from one place to another (cruise)
+
+Send cargo from one place to another (cargo)
+
+The system should:
+
+Find the total amount collected by the company
+
+Find the total amount collected for each ship
+
+List all customer details for a particular cruise ship
+
+2️. Identified Classes
+
+From the problem statement:
+
+MarineCompany
+
+Ship (base class)
+
+CruiseShip
+
+CargoShip
+
+Customer
+
+Booking
+
+3️. Relationships (OO Design)
+
+MarineCompany has many Ships
+
+Ship has many Bookings
+
+Booking belongs to one Customer
+
+CruiseShip / CargoShip IS-A Ship

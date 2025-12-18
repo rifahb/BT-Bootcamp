@@ -1,0 +1,51 @@
+@startuml
+
+class Trainer {
+    trainerId : int
+    name : String
+    +train()
+    +assignTechnology()
+}
+
+class Trainee {
+    traineeId : int
+    name : String
+    +enroll()
+}
+
+class Technology {
+    techId : int
+    techName : String
+}
+
+class Course {
+    courseId : int
+    courseName : String
+    +addModule()
+}
+
+class Module {
+    moduleId : int
+    moduleName : String
+    +addUnit()
+}
+
+class Unit {
+    unitId : int
+    unitName : String
+    +addTopic()
+}
+
+class Topic {
+    topicId : int
+    topicName : String
+}
+
+Trainer "1" -- "*" Trainee : trains
+Trainer "1" -- "1" Technology : teaches
+Course "1" -- "1" Technology : uses
+Course "1" -- "*" Module : contains
+Module "1" -- "*" Unit : composed of
+Unit "1" -- "*" Topic : has
+
+@enduml
