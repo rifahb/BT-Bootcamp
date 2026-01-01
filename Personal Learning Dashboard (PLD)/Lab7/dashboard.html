@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+<header class="bg-dark text-white p-3">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <h1 class="h4 mb-2 mb-md-0">Dashboard</h1>
+    <div>
+      <a href="profile.html" class="text-white me-3">Profile</a>
+      <a href="gallery.html" class="text-white">Gallery</a>
+    </div>
+  </nav>
+</header>
+
+
+<main class="container my-4">
+
+  <div class="row">
+
+    <!-- Topics Explorer -->
+    <div class="col-12 col-md-6 mb-4">
+      <section class="card p-3">
+        <h2 class="h5 mb-3">📚 Topics Explorer</h2>
+
+        <details class="mb-2">
+          <summary>Module 1: HTML</summary>
+          <ul>
+            <li>Unit 1: Basics
+              <ul>
+                <li>Topic: Semantic Tags</li>
+                <li>Topic: Forms</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+        <details class="mb-2">
+          <summary>Module 2: CSS</summary>
+          <ul>
+            <li>Unit 1: Styling
+              <ul>
+                <li>Topic: Box Model</li>
+                <li>Topic: Flexbox</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+      </section>
+    </div>
+
+    <!-- Labs Tracker -->
+<div class="col-12 col-md-6 mb-4">
+  <section class="card p-3">
+    <h2 class="h5 mb-3">🧪 Labs Tracker</h2>
+
+    <!-- Lab 1 -->
+    <p>
+      <strong>HTML Basics</strong> –
+      <span class="text-success">Completed</span>
+    </p>
+    <div class="progress mb-3">
+      <div class="progress-bar w-100">100%</div>
+    </div>
+
+    <!-- Lab 2 -->
+    <p>
+      <strong>CSS Basics</strong> –
+      <span class="text-warning">In Progress</span>
+    </p>
+    <div class="progress mb-3">
+      <div class="progress-bar bg-warning w-75">75%</div>
+    </div>
+
+    <!-- Lab 3 -->
+    <p>
+      <strong>Bootstrap Basics</strong> –
+      <span class="text-danger">Pending</span>
+    </p>
+    <div class="progress">
+      <div class="progress-bar bg-danger w-25">25%</div>
+    </div>
+
+  </section>
+</div>
+
+
+  </div>
+
+</main>
+
+
+<footer>
+  <p>© 2026 PLD</p>
+</footer>
+
+</body>
+</html>

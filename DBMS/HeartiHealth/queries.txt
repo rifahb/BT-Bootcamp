@@ -486,3 +486,37 @@ JOIN symptom s
 WHERE c.cardioarrestdetected = 1
   AND w.slope = 2
 GROUP BY a.state;
+
+SELECT
+    a.state,
+    m.gender,
+    COUNT(DISTINCT m.member_id)                AS high_risk_patient_count,
+    AVG(m.age)                                 AS avg_age,
+    AVG(b.bloodpressure)                       AS avg_blood_pressure,
+    AVG(b.serumcholesterol)                    AS avg_cholesterol
+FROM memberinfo m
+JOIN addressinfo a
+    ON m.member_id = a.memberinfo_member_id
+JOIN cardiodiagnosis c
+    ON m.member_id = c.memberinfo_member_id
+JOIN bloodtest b
+    ON c.cardio_id = b.cardiodiagnosis_cardio_id
+JOIN wearabledevicedata w
+    ON c.cardio_id = w.cardiodiagnosis_cardio_id
+JOIN xray x
+    ON c.cardio_id = x.cardiodiagnosis_cardio_id
+JOIN symptom s
+    ON c.cardio_id = s.cardiodiagnosis_cardio_id
+WHERE
+    c.cardioarrestdetected = 1          
+    AND m.age > 45
+    AND b.bloodpressure >= 140
+    AND b.serumcholesterol > 200
+    AND w.slope = 2
+GROUP BY
+    a.state,
+    m.gender
+ORDER BY
+    a.state,
+    m.gender;
+

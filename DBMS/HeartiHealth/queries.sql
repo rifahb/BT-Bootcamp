@@ -178,9 +178,16 @@ JOIN memberinfo m ON c.memberinfo_member_id = m.member_id;
 SELECT AVG(age) AS average_age FROM memberinfo;
 
 -- 35. Total cities per state
-SELECT state, COUNT(DISTINCT city) AS total_cities
-FROM addressinfo
-GROUP BY state;
+SELECT state,  
+CASE
+WHEN gender='0' THEN 'Male'
+WHEN gender='1' THEN 'Female'
+END AS gender,
+COUNT(DISTINCT city) AS total_cities
+FROM addressinfo a
+JOIN memberinfo m ON a.memberinfo_member_id = m.member_id
+GROUP BY state,gender
+ORDER BY state, gender;
 
 -- 36. Patient count by age group
 SELECT
